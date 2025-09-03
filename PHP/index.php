@@ -123,8 +123,8 @@
                     <div class="text-box">
                         <select name="country" id="country">
                             <option value="select">Select a country</option>
-                            <option value="select">Bangladesh</option>
-                            <option value="select">USA</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="USA">USA</option>
                         </select>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                         </label>
                     </div>
                     <div class="text-box">
-                        <input type="text" name="phone" id="phone">
+                        <input type="text" name="tel" id="phone">
                     </div>
                 </div>
 
@@ -604,6 +604,98 @@ function validate_zip() {
     }
 }
 
+function validate_country() {
+    if(isset($_POST["country"])) {
+        if(!empty($_POST["country"])) {
+            if(ctype_alpha(str_replace(" ", "", $_POST["country"]))) {
+                echo "Country: {$_POST["country"]}. <br>";
+            }else {
+                
+            }
+        }else {
+           
+        }
+    }else {
+        
+    }
+}
+
+function validate_tel() {
+    if(isset($_POST["tel"])) {
+        if(!empty($_POST["tel"])) {
+            if(ctype_digit($_POST["tel"])) {
+                if(strlen($_POST["tel"]) == 11) {
+                    echo "Mobile no. {$_POST["tel"]}<br>";
+                }else {
+                    echo "Invalid Phone number. Must contain 11 digti<br>";
+                }
+            }else {
+                echo "Mobile no only cntains digits<br>";
+            }
+        }else {
+           echo "Mobile No. can not be empty<br>"; 
+        }
+    }else {
+        echo "Mobile No. can not be empty<br>";
+    }
+}
+
+function validate_fax() {
+    if(isset($_POST["fax"])) {
+        if(!empty($_POST["fax"])) {
+            if(ctype_digit($_POST["fax"])) {
+                if(strlen($_POST["fax"]) == 10) {
+                    
+                }else {
+                    
+                }
+            }else {
+                
+            }
+        }else {
+           
+        }
+    }else {
+        
+    }
+}
+
+function validate_email() {
+    if(isset($_POST["email"])) {
+        if(!empty($_POST["email"])){
+            if(filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
+                echo "Email: {$_POST["email"]}<br>";
+            }else {
+                echo "Invalid email address.<br>";
+            }
+        }else {
+           echo "Please enter your email. It can not be empty.<br>"; 
+        }
+    }else {
+        echo "Please enter your email<br>";
+    }
+}
+
+function validate_donation() {
+    if(isset($_POST["donatin-amount"])) {
+        if(!empty($_POST["donation-amount"])) {
+            if($_POST["donatin-amount"] === "None") {
+                return;
+            }else {
+                echo "amount: {$_POST["donatin-amount"]}<br>";
+            }
+        }else {
+
+        }
+    }else {
+
+    }
+}
+
+function validate_other_amount() {
+    
+}
+
 
 
 if($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -615,6 +707,11 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     validate_city();
     validate_state();
     validate_zip();
+    validate_country();
+    validate_tel();
+    validate_fax();
+    validate_email();
+    validate_donation();
 }
 
 ?>
