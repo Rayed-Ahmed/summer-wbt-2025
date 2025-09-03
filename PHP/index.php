@@ -1,239 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+
+        <div class="whole">
+            <div class="first">
+                <small>
+                    <span class="asteric">* </span>
+                    - Denotes Required Information
+                </small><br>
+                <p>> <strong>1 Donation</strong> > 2 Confirmation > Thank You!</p>
+            </div>
+
+            <h1>Donor Information</h1>
+            <div>
+                <div class="container">
+                    <div class="label">
+                        <label for="first-name">
+                            First Name <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="first-name" id="first-name">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="last-name">
+                            Last Name <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="last-name" id="last-name">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="company">
+                            Company
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="company" id="company" >
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="label">
+                        <label for="address-1">
+                            Address 1 <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="address-1" id="address-1">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="address-2">
+                            Address 2 <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="address-2" id="address-2">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="city">
+                            City <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="city" id="city">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="state">
+                            State <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <select name="state" id="start">
+                            <option value="select">Select a state</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="zip-code">
+                            Zip Code <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="zip-code" id="zip-code">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="country">
+                            Country <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <select name="country" id="country">
+                            <option value="select">Select a country</option>
+                            <option value="select">Bangladesh</option>
+                            <option value="select">USA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="phone">
+                            Phone
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="phone" id="phone">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="fax">
+                            Fax
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" name="fax" id="fax">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="email">
+                            Email <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="donation">
+                            Donation Amount <span class="important">*</span>
+                        </label>
+                    </div>
+                    <div class="parent-wrapper">
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="none" id="none">
+                            </div>
+                            <div class="radio-label">
+                                <label for="none">None</label>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="50" id="$50">
+                            </div>
+                            <div class="radio-label">
+                                <label for="$50">$50</label>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="75" id="$75">
+                            </div>
+                            <div class="radio-label">
+                                <label for="$75">$75</label>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="100" id="$100">
+                            </div>
+                            <div class="radio-label">
+                                <label for="$100">$100</label>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="250" id="$250">
+                            </div>
+                            <div class="radio-label">
+                                <label for="$250">$250</label>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" name="donation-amount" value="other" id="other">
+                            </div>
+                            <div class="radio-label">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="custom-donation">
+                    <div class="small-text">
+                        <small>(Check a button or type in your amount)</small>
+                    </div>
+                    <div class="container custom-container">
+                        <div class="label">
+                            <label for="first-name">
+                                Other Amount $
+                            </label>
+                        </div>
+                        <div class="text-box">
+                            <input type="text" name="other-amound" id="first-name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="recurring-donation">
+                            Recurring Donation
+                        </label>
+                        <small>(Check if yes)</small><br>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="recurring-donation" value="yes" id="re-donation">
+                        <label for="re-donation">
+                            I am interested in giving on a regular basis.
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="credit-card">
+                    <small>Monthly Credit Cart $</small>
+                    <input type="text" name="credit-card">
+                    <small>For</small>
+                    <input type="text" name="month">
+                    <small>Month</small>
+                </div>
+            </div>
+            <!-- ----------------------------Second section------------------------------------------- -->
+            <h1>Honorarium and Memorial Donation Information</h1>
+            <div>
+                <div class="container">
+                    <div class="label">
+                        <label for="like-donation">
+                            I would like to make this donation
+                        </label>
+                    </div>
+                    <div class="donation-wrap">
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" id="none">
+                            </div>
+                            <div class="radio-label">
+                                <label for="none">None</label>
+                            </div>
+                        </div>
+
+                        <div class="wrapper">
+                            <div class="radio">
+                                <input type="radio" id="$50">
+                            </div>
+                            <div class="radio-label">
+                                <label for="$50">$50</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="first-name">
+                            Name
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" id="first-name">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="acknowledge-donation">
+                            Acknowledge Donatio to
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" id="acknowledge-donation">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="address">
+                            Address
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" id="address">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="city">
+                            City
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" id="city">
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="state">
+                            State
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <select name="state" id="start">
+                            <option value="select">Select a state</option>
+                            <option value="select">Bangladesh</option>
+                            <option value="select">USA</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="label">
+                        <label for="zip-code">
+                            Zip Code
+                        </label>
+                    </div>
+                    <div class="text-box">
+                        <input type="text" id="zip-code">
+                    </div>
+                </div>
+
+            </div>
+            <!-- --------------------------------------Third section----------------------------------------------- -->
+            <h1>Additional Information</h1>
+            <p>Please enter your name, company or organization as you would like it to appear in our publications:</p>
+
+            <div class="container">
+                <div class="label">
+                    <label for="name">
+                        Name
+                    </label>
+                </div>
+                <div class="text-box">
+                    <input type="text" id="name">
+                </div>
+            </div>
+
+            <div class="selection-box">
+                <div>
+                    <input type="checkbox">
+                    <label for="">
+                        I would like my gift to remain anonymous.
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="">
+                        My employer offers a matching gift program. I will mail the matching gift form.
+                    </label>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <label for="">
+                        Please save the cost of acknowledging this gift by not mailing a thank you
+                        letter.
+                    </label>
+                </div>
+            </div>
+
+            <div class="container area">
+                <div class="comments">
+                    <div class="line comment-label"><strong>Comments</strong></div>
+                    <div class="line comment-help"> (Please type any question and feedback</div>
+                    <div class="line comment-here">here)</div>
+                </div>
+                <div class="rx">
+                    <textarea id="text-area" rows="5" cols="38"></textarea>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="label">
+                    <label for="contact">
+                        How may we contact you?
+                    </label>
+                </div>
+                <div class="">
+                    <div>
+                        <input type="checkbox" id="contact-email" name="contact_method" value="email">
+                        <label for="contact-email"><small>E-mail</small></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="contact-postal" name="contact_method" value="postal">
+                        <label for="contact-postal"><small>Postal Mail</small></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="contact-phone" name="contact_method" value="telephone">
+                        <label for="contact-phone"><small>Telephone</small></label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="contact-fax" name="contact_method" value="fax">
+                        <label for="contact-fax"><small>Fax</small></label>
+                    </div>
+                </div>
+            </div>
+
+            <p>I would like to receive newsletters and information about special events by:</p>
+            <div class="additional">
+                <input type="checkbox" name="" id="">
+                <label for=""><small>Email</small></label><br>
+                <input type="checkbox" name="" id="">
+                <label for=""><small>Postal Code</small></label>
+            </div>
+
+            <div class="selection-box">
+                <input type="checkbox" name="" id="">
+                I would like information about volunteering with the
+            </div>
+
+            <div class="btn">
+                <div>
+                    <input type="submit" value="submit">
+                </div>
+                <div>
+                    <input type="reset" value="Reset">
+                </div>
+            </div>
+
+            <!-- ------ -->
+            <p>
+                <small>
+                    🔒 Donate online with confidence. You are on a secure server. <br>
+
+                    If you have any problems or questions, please contact support.
+                </small>
+            </p>
+
+        </div>
+    </form>
+</body>
+
+</html>
+
+
 <?php
-//1. Write a PHP script to calculate the area and perimeter of a Rectangle, and display the result. Hints: The area of a Rectangle = length × width, perimeter = 2 × (length + width)
 
-echo "<h3>1. Area and Perimeter:</h3> <br> <br>";
-
-$length = 10;
-$width = 5;
-
-$area = $length * $width;
-$perimeter = 2 * ($length + $width);
-echo "Area : $area.<br>";
-echo "Perimerter: $perimeter.<br>";
-
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-
-//2. Write a PHP script to calculate the VAT (Value Added Tax) over an amount Hints: VAT = 15% of the amount
-
-echo "<h3>2. Vat:</h3>  <br><br>";
-
-$amount = 5000;
-$vat = 0.15;
-
-$total = ($amount * $vat) + $amount;
-echo "Total Amount: $total<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-//3. Write a PHP script to find whether a given number is odd or even Hints: use IF-ELSE
-
-echo "<h3>3. Even or Odd:</h3>  <br><br>";
-
-$val = 5;
-if($val % 2 == 0) {
-    echo "Even <br>";
-}else {
-    echo "Odd <br>";
-}
-
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-//4. Write a PHP script to find the largest number from three given numbers Hints: use IF-ELSE
-
-echo "<h3>4.Finding the largest number from three given numbers:</h3> <br><br>";
-
-$a = 10;
-$b = 20;
-$c = 30;
-
-if($a > $b && $a > $c) {
-    echo "$a is the largest number <br>";
-}else if($b > $a && $b > $c) {
-    echo "$b is the largest number <br>";
-}else {
-    echo "$c is the largest number <br>";
-}
-
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-//5. Write a PHP script to print all the odd numbers between 10 to 100 Hints: use LOOP & IF-ELSE
-
-echo "<h3>5.Printing all the odd numbers between 10 to 100:</h3>  <br><br>";
-
-for($i = 10; $i <= 100; $i++) {
-    if($i % 2 != 0) {
-        echo "$i is odd number <br>";
+function valid_firstName() {
+    if(isset($_POST["first-name"])) {
+        if(!empty($_POST["first-name"])) {
+            if(ctype_alpha(str_replace(" ", "", $_POST["first-name"]))) {
+                echo "First Name: {$_POST["first-name"]}.<br>";
+            }else {
+                echo "First name is invalid.<br>";
+            }
+        }else {
+            echo "First name can not be empty.<br>";
+        }
+    }else{
+        echo "First name is required.<br>";
     }
 }
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
-//6. Write a PHP script to search an element from an array Hints: use LOOP, IF-ELSE & ARRAY
-
-echo "<h3>6. Searching an element from an array:</h3>  <br><br>";
-
-$list = [1, 2, 4, 8, 10, 16];
-$elemToFind = 8;
-$found = false;
-
-for($i = 0; $i < count($list); $i++) {
-    if($list[$i] === $elemToFind) {
-        $found = true;
-        break;
-    }    
-}
-
-if($found) {
-    echo "Found <br>";
-}else {
-    echo "Not Found <br>";
-}
-
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-/*7. Print the following shapes Hints: use NESTED LOOP
- 
-*
-* *
-* * *
-	
-1 2 3
-12
-1
-	
-A
-B C
-D E F
-*/
-
-echo "<h3>7. Printing shapes:</h3> <br><br>";
-
-for ($i = 0; $i < 3; $i++) {
-    for($j = 0; $j <= $i; $j++) {
-        echo "*";
+function valid_lastName() {
+    if(isset($_POST["last-name"])) {
+        if(!empty($_POST["last-name"])) {
+            if(ctype_alpha(str_replace(" ", "", $_POST["last-name"]))) {
+                echo "Last Name: {$_POST["last-name"]}.<br>";
+            }else {
+                echo "Last name is invalid.<br>";
+            }
+        }else {
+            echo "Last name can not be empty.<br>";
+        }
+    }else{
+        echo "Last name is required.<br>";
     }
-    echo "<br>";
 }
 
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-for ($i = 3; $i > 0; $i--) {
-    for($j = 0; $j < $i; $j++) {
-        echo $j + 1;
-    }
-    echo "<br>";
-}
-
-echo "<br>";
-echo "<br>";
-echo "<br>";
-
-for($i = 0; $i < 3; $i++) {
-    for($j = 0; $j <= $i; $j++) {
-        $alpha = chr($j + 65);
-        echo $alpha;
-    }
-    echo "<br>";
-}
-
-
-// 8. Simple Interest
-echo "<h3>8. Simple Interest</h3>";
-$principal = 1000;  
-$rate = 5;  
-$time = 2;  
-$simple_interest = ($principal * $rate * $time) / 100;  
-echo "Principal = $principal, Rate = $rate%, Time = $time years<br>";
-echo "Simple Interest = " . $simple_interest . "<br><br>";
-
-// 9. Swap Two Numbers (Without 3rd variable, using array)
-echo "<h3>9. Swap Two Numbers</h3>";
-$a = 10;  
-$b = 20;  
-echo "Before Swap: a = $a, b = $b<br>";
-list($a, $b) = array($b, $a);  
-echo "After Swap: a = $a, b = $b<br><br>";
-
-// 10. Leap Year Check
-echo "<h3>10. Leap Year Check</h3>";
-$year = 2024;  
-if (($year % 400 == 0) || ($year % 4 == 0 && $year % 100 != 0)) {
-    echo "$year is a Leap Year<br><br>";
-} else {
-    echo "$year is NOT a Leap Year<br><br>";
-}
-
-
-// 11. Factorial of a Number
-echo "<h3>11. Factorial of a Number</h3>";
-$num = 5;  
-$fact = 1;  
-for ($i = 1; $i <= $num; $i++) {
-    $fact *= $i;
-}
-echo "Factorial of $num is $fact<br><br>";
-
-
-// 12. Prime Numbers between 1 to 50
-
-echo "<h3>12. Prime Numbers (1 - 50)</h3>";
-for ($num = 2; $num <= 50; $num++) {
-    $isPrime = true;
-    for ($i = 2; $i <= sqrt($num); $i++) {
-        if ($num % $i == 0) {
-            $isPrime = false;
-            break;
+function validate_company() {
+    if(empty($_POST["company"])) {
+        return;
+    }else {
+        if(ctype_alpha(str_replace(" ", "", $_POST["company"]))) {
+            echo "Company: {$_POST["company"]}.<br>";
+        }else {
+            echo "Company Name is invalid.<br>";
         }
     }
-    if ($isPrime) {
-        echo $num . " ";
+}
+
+function validate_address1() {
+    if(isset($_POST["address-1"])) {
+        if(!empty($_POST["address-1"])) {
+            if(ctype_digit($_POST["address-1"])) {
+                echo "Invalid address.<br>";
+            }else {
+                echo "Address1: {$_POST["address-1"]}.<br>";
+            }
+        }else {
+            echo "Address1 can not be empty.<br>";
+        }
+    }else {
+        echo "Address1 is required.<br>";
     }
 }
-echo "<br><br>";
 
-
-// 13. Patterns
-echo "<h3>13. Patterns</h3>";
-
-// Pattern 1
-echo "<b>Pattern 1</b><br>";
-for ($i = 5; $i >= 1; $i--) {
-    for ($j = 1; $j <= $i; $j++) {
-        echo "*";
+function validate_address2() {
+    if(isset($_POST["address-2"])) {
+        if(!empty($_POST["address-2"])) {
+            if(ctype_digit($_POST["address-2"])) {
+                echo "Invalid address.<br>";
+            }else {
+                echo "Address2: {$_POST["address-2"]}.<br>";
+            }
+        }else {
+            echo "Address2 can not be empty.<br>";
+        }
+    }else {
+        echo "Address2 is required.<br>";
     }
-    echo "<br>";
 }
-echo "<br>";
 
-// Pattern 2
-echo "<b>Pattern 2</b><br>";
-for ($i = 1; $i <= 4; $i++) {
-    for ($j = 1; $j <= $i; $j++) {
-        echo $j . " ";
+function validate_city() {
+    if(isset($_POST["city"])) {
+        if(!empty($_POST["city"])) {
+            if(ctype_alpha(str_replace(" ", "", $_POST["city"]))) {
+                echo "City: {$_POST["city"]}. <br>";
+            }else {
+                echo "Invalid city.<br>";
+            }
+        }else {
+            echo "City can not be empty.<br>";
+        }
+    }else {
+        echo "City is required.<br>";
     }
-    echo "<br>";
 }
-echo "<br>";
 
-// Pattern 3
-echo "<b>Pattern 3</b><br>";
-for ($i = 1; $i <= 4; $i++) {
-    $char = chr(ord('A') + $i - 1);
-    for ($j = 1; $j <= $i; $j++) {
-        echo $char . " ";
+function validate_state() {
+    if(isset($_POST["state"])) {
+        if(!empty($_POST["state"])) {
+            if($_POST["state"] === "select") {
+              echo "Selct a state.<br>";  
+            }else {
+                echo "State: {$_POST["state"]}.<br>";
+            }
+        }else {
+            echo "Selct a state.<br>";
+        }
+    }else {
+        echo "Selct a state.<br>";
     }
-    echo "<br>";
 }
+
+function validate_zip() {
+    if(isset($_POST["zip-code"])) {
+        if(!empty($_POST["zip-code"])) {
+            if(ctype_digit($_POST["zip-code"]) && strlen($_POST["zip-code"]) === 5) {
+
+            }
+        }else {
+
+        }
+
+    }else {
+        echo "Zip can not be empty.<br>";
+    }
+}
+
+
+
+if($_SERVER["REQUEST_METHOD"] === "POST") {
+    valid_firstName();
+    valid_lastName();
+    validate_company();
+    validate_address1();
+    validate_address2();
+    validate_city();
+    validate_state();
+    validate_zip();
+}
+
+?>
